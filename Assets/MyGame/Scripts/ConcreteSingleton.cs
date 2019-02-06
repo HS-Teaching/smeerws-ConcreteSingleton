@@ -4,22 +4,22 @@
  */
 using UnityEngine;
 
-public class SingletonControllerFixIssue4 : GenericSingletonClass<SingletonControllerFixIssue4> {
-
-    private string name = "";
+public class ConcreteSingleton : GenericSingletonClass<ConcreteSingleton> {
+   
+    private string yourName = "";
 
     public string Name
     {
         get
         {
-            Debug.Log("get name " + name);
-            return name;
+            Debug.Log("get name " + yourName);
+            return yourName;
         }
 
         set
         {
-            name = value;
-            Debug.Log("name set to " + name);
+            Debug.Log("set name " + yourName);
+            yourName = value;
         }
     }
 }
